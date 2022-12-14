@@ -54,7 +54,7 @@ from detectron2.config import get_cfg
 import os
 
 cfg = get_cfg()
-cfg.merge_from_file(os.path.join(modpath,"/configs/COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml"))
+cfg.merge_from_file(os.path.join(args.modpath,"/configs/COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml"))
 cfg.DATASETS.TRAIN = ("compititions",)
 cfg.DATASETS.TEST = ()   
 cfg.DATALOADER.NUM_WORKERS = args.nw
